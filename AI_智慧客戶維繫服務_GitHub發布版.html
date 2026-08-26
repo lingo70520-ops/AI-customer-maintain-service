@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI 智慧客戶維繫服務｜跨產業客戶互動與下一步行動建議" />
+  <title>AI 智慧客戶維繫服務｜報告展示版</title>
+  <style>
+:root{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#172033;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}.app-shell{width:min(100% - 3rem,1280px);margin:auto;padding:2.5rem 0 4rem}.topbar,.section-heading,.filters{display:flex;justify-content:space-between;gap:1.25rem;align-items:flex-end}.topbar{margin-bottom:3rem;align-items:center}h1,h2,p{margin-top:0}h1{margin-bottom:.25rem;font-size:clamp(1.75rem,4vw,2.5rem)}h2{margin-bottom:0;font-size:clamp(1.3rem,3vw,1.65rem)}.eyebrow{margin-bottom:.4rem;color:#2563eb;font-size:.78rem;font-weight:800;letter-spacing:.08em}.today,.section-heading>p,#results-count{color:#667085;font-size:.9rem}.stats-grid,.advice-grid{display:grid;gap:1rem;margin-top:1.25rem}.stats-grid{grid-template-columns:repeat(4,1fr)}.advice-grid{grid-template-columns:repeat(3,1fr)}.stat-card,.advice-card,.panel{background:#fff;border:1px solid #e4e7ec;border-radius:1rem;box-shadow:0 6px 18px rgb(16 24 40 / 5%)}.stat-card{padding:1.25rem}.stat-card p{margin-bottom:.5rem;color:#667085;font-size:.9rem}.stat-card strong{color:#1d4ed8;font-size:2rem}.panel{margin-top:2rem;padding:1.5rem}.compact{align-items:start}.advice-card{padding:1.2rem;border-left:4px solid #60a5fa}.advice-card h3{margin:0 0 .35rem;font-size:1.05rem}.advice-card p{margin:.55rem 0;color:#475467;font-size:.9rem;line-height:1.6}.muted{color:#667085}.filters{margin:1.5rem 0;align-items:end}.search-field{flex:1}.search-field input,.select-field select{width:100%;border:1px solid #d0d5dd;border-radius:.55rem;background:#fff;padding:.72rem .8rem;color:#172033}.select-field{min-width:180px;color:#475467;font-size:.85rem;font-weight:700}.select-field select{margin-top:.35rem}.table-wrap{overflow-x:auto}table{width:100%;min-width:1100px;border-collapse:collapse;text-align:left}th,td{padding:.9rem .75rem;border-bottom:1px solid #eaecf0;font-size:.88rem;vertical-align:middle}th{color:#667085;font-size:.76rem;letter-spacing:.03em}td:nth-child(7){min-width:220px;color:#475467;line-height:1.5}.badge{display:inline-flex;padding:.25rem .55rem;border-radius:99px;font-size:.78rem;font-weight:700;white-space:nowrap}.status-新客戶{color:#075985;background:#e0f2fe}.status-活躍{color:#166534;background:#dcfce7}.status-待關注{color:#92400e;background:#fef3c7}.status-長期未互動{color:#6b21a8;background:#f3e8ff}.status-可能流失{color:#b42318;background:#fee4e2}.status-可升級{color:#1d4ed8;background:#dbeafe}.channel{color:#1d4ed8;font-weight:800}.action-group{display:flex;flex-wrap:wrap;gap:.4rem;min-width:175px}.button{border:1px solid #cbd5e1;border-radius:.45rem;background:#fff;color:#334155;padding:.38rem .5rem;font-size:.78rem;font-weight:700}.button:hover,.button:focus-visible,.data-link:hover,.data-link:focus-visible{border-color:#2563eb;color:#1d4ed8;outline:none}.button.primary{border-color:#2563eb;background:#2563eb;color:#fff}.data-link{border:0;background:transparent;padding:0;color:#1d4ed8;font:inherit;font-weight:700;text-align:left;text-decoration:underline;text-underline-offset:2px}.empty-state{padding:1rem;color:#667085;text-align:center}.modal[hidden]{display:none}.modal{position:fixed;z-index:10;inset:0;display:grid;place-items:center;padding:1rem}.modal-backdrop{position:absolute;inset:0;background:rgb(15 23 42 / 55%)}.modal-content{position:relative;z-index:1;width:min(100%,680px);max-height:min(85vh,720px);overflow:auto;padding:2rem;border-radius:1rem;background:#fff;box-shadow:0 24px 60px rgb(15 23 42 / 25%)}.modal-close{position:absolute;top:.75rem;right:.85rem;border:0;background:transparent;color:#475467;font-size:1.8rem;line-height:1}.detail-list{display:grid;grid-template-columns:130px 1fr;gap:.65rem 1rem;margin:1.5rem 0 0}.detail-list dt{color:#667085}.detail-list dd{margin:0;font-weight:600}.contact-options{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.25rem}.contact-options span{padding:.4rem .6rem;border:1px solid #d0d5dd;border-radius:.45rem;color:#667085;font-size:.82rem}.analysis{margin-top:1.25rem;padding:1rem;border-radius:.75rem;background:#eff6ff;color:#1e3a8a;line-height:1.7}.message-tabs{display:flex;gap:.5rem;margin:1.25rem 0}.message-tab{border:1px solid #d0d5dd;border-radius:.45rem;background:#fff;padding:.5rem .8rem;color:#475467;font-weight:700}.message-tab.active{border-color:#2563eb;background:#eff6ff;color:#1d4ed8}.message-content{white-space:pre-line;padding:1rem;border:1px solid #dbeafe;border-radius:.75rem;background:#f8fbff;color:#334155;line-height:1.8}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.import-panel h3{margin:1.5rem 0 .45rem;font-size:1rem}.import-controls,.preview-heading{display:flex;gap:1rem;align-items:center;justify-content:space-between;margin-top:1.25rem}.file-picker{display:inline-flex;align-items:center;gap:.75rem;border:1px dashed #93c5fd;border-radius:.65rem;background:#eff6ff;padding:.7rem .85rem;color:#1d4ed8;font-size:.9rem;font-weight:700}.file-picker input{max-width:225px;color:#475467}.mapping-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:.75rem}.mapping-grid label{color:#475467;font-size:.8rem;font-weight:700}.mapping-grid select{width:100%;margin-top:.3rem;border:1px solid #d0d5dd;border-radius:.45rem;background:#fff;padding:.5rem}.preview-heading{margin:1.5rem 0 .75rem}.preview-heading h3,.preview-heading p{margin:0}.preview-table{min-width:1250px}.data-status{color:#9a3412;background:#ffedd5}.data-status.正常{color:#166534;background:#dcfce7}@media(max-width:900px){.stats-grid{grid-template-columns:repeat(2,1fr)}.advice-grid{grid-template-columns:1fr}}@media(max-width:700px){.import-controls,.preview-heading{align-items:stretch;flex-direction:column}.file-picker{align-items:flex-start;flex-direction:column}.mapping-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.app-shell{width:min(100% - 1.5rem,1280px);padding-top:1.5rem}.topbar,.section-heading,.filters{align-items:stretch;flex-direction:column}.topbar{margin-bottom:2rem}.panel{padding:1rem}.stats-grid{grid-template-columns:1fr}.select-field{min-width:0}.modal-content{padding:1.5rem 1.2rem}.detail-list{grid-template-columns:1fr;gap:.25rem}.detail-list dd{margin-bottom:.65rem}}
+
+
+html{scroll-behavior:smooth}
+.hero{position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:4rem max(1.5rem,calc((100vw - 1280px)/2));color:#f8fbff;background:radial-gradient(circle at 18% 16%,rgba(96,165,250,.22),transparent 28%),radial-gradient(circle at 84% 26%,rgba(129,140,248,.20),transparent 30%),linear-gradient(135deg,#07142f 0%,#0b2250 48%,#102b63 100%)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:42px 42px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(420px,.9fr);gap:5rem;align-items:center;width:100%;max-width:1280px;margin:0 auto}.hero-copy{max-width:720px}.hero-kicker{margin:0 0 1rem;color:#7dd3fc;font-size:.78rem;font-weight:900;letter-spacing:.18em}.hero h1{margin:0;font-size:clamp(2.75rem,6vw,5.8rem);line-height:1.04;letter-spacing:-.04em;color:#fff}.hero-slogan{margin:1.4rem 0 .75rem;font-size:clamp(1.25rem,2.2vw,1.8rem);font-weight:800;color:#dbeafe}.hero-description{max-width:660px;margin:0;color:#b9c9e5;font-size:1rem;line-height:1.9}.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}.hero-button{border-radius:.75rem;padding:.9rem 1.3rem;font-weight:800;border:1px solid rgba(255,255,255,.24);transition:.2s ease}.hero-button.primary{background:#fff;color:#153a7a;border-color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18)}.hero-button.secondary{background:rgba(255,255,255,.07);color:#eaf2ff}.hero-button:hover{transform:translateY(-2px)}.hero-tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}.hero-tags span{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);border-radius:99px;padding:.38rem .65rem;color:#c9d9f2;font-size:.78rem}.hero-visual{position:relative;min-height:440px;display:grid;place-items:center}.visual-card{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.09);box-shadow:0 30px 80px rgba(0,0,0,.28);backdrop-filter:blur(16px)}.visual-card-main{width:min(100%,470px);padding:1.45rem;border-radius:1.4rem}.visual-card-head{display:flex;align-items:center;gap:.6rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.12)}.visual-card-head strong{font-size:.95rem}.visual-dot{width:.65rem;height:.65rem;border-radius:50%;background:#38bdf8;box-shadow:0 0 18px #38bdf8}.visual-chip{margin-left:auto;border-radius:99px;background:rgba(34,197,94,.16);color:#86efac;padding:.25rem .55rem;font-size:.72rem;font-weight:800}.decision-row{display:grid;grid-template-columns:44px 1fr;gap:.85rem;align-items:center;padding:1rem .2rem}.decision-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:.75rem;background:rgba(96,165,250,.16);color:#93c5fd;font-weight:900}.decision-row small{display:block;color:#91a6c7;margin-bottom:.18rem}.decision-row strong{color:#fff;font-size:.98rem}.decision-line{width:1px;height:15px;margin:-.6rem 0 -.6rem 20px;background:rgba(148,163,184,.35)}.float-card{position:absolute;border:1px solid rgba(255,255,255,.14);border-radius:1rem;padding:.8rem 1rem;background:rgba(8,29,66,.86);box-shadow:0 18px 44px rgba(0,0,0,.3)}.float-card span{display:block;color:#9fb5d5;font-size:.72rem;margin-bottom:.2rem}.float-card strong{color:#fff;font-size:.88rem}.float-card-a{right:-1rem;top:3.4rem}.float-card-b{left:-1rem;bottom:4rem}.hero-flow{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:1rem;max-width:1000px;width:100%;margin:4rem auto 0;padding:1rem;border-top:1px solid rgba(255,255,255,.12)}.hero-flow div{text-align:center}.hero-flow strong{display:block;color:#60a5fa;font-size:.72rem}.hero-flow span{font-size:.82rem;color:#d7e3f5}.hero-flow i{font-style:normal;color:#55749f}.topbar-actions{display:flex;align-items:center;gap:.8rem}.back-home{border:1px solid #d0d5dd;border-radius:.55rem;background:#fff;color:#344054;padding:.55rem .75rem;font-weight:700}.privacy-note{display:flex;align-items:center;gap:.8rem;margin:1.1rem 0 0;padding:.85rem 1rem;border:1px solid #dbeafe;border-radius:.75rem;background:#f8fbff;color:#475467;font-size:.86rem}.privacy-note strong{color:#1d4ed8;white-space:nowrap}.demo-footer{display:flex;justify-content:space-between;gap:1rem;margin-top:2rem;padding:1.2rem 0;color:#667085;font-size:.8rem;border-top:1px solid #e4e7ec}.status-使用陪伴{color:#075985;background:#e0f2fe}.status-互動培養{color:#92400e;background:#fef3c7}.status-可評估下一階段{color:#1d4ed8;background:#dbeafe}.status-持續維繫{color:#166534;background:#dcfce7}.status-待人工確認{color:#9a3412;background:#ffedd5}
+@media(max-width:980px){.hero{min-height:auto;padding-top:5rem;padding-bottom:3rem}.hero-inner{grid-template-columns:1fr;gap:2.2rem}.hero-visual{min-height:390px}.float-card-a{right:2%}.float-card-b{left:2%}}
+@media(max-width:700px){.hero{padding-left:1.25rem;padding-right:1.25rem}.hero h1{font-size:clamp(2.5rem,13vw,4.2rem)}.hero-visual{min-height:330px}.visual-card-main{padding:1rem}.float-card{display:none}.hero-flow{overflow-x:auto;justify-content:flex-start;padding-left:0;padding-right:0}.hero-flow div{min-width:100px}.hero-flow i{display:none}.topbar-actions{align-items:flex-start;flex-direction:column}.privacy-note{align-items:flex-start;flex-direction:column}.demo-footer{flex-direction:column}}
+
+
+/* ===== 提示框版面修正：保留內容，但改為整齊排列、不超出主視覺 ===== */
+.hero-visual{
+  align-content:center;
+  gap:1rem;
+}
+.prompt-card-row{
+  width:min(100%,470px);
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.8rem;
+  position:relative;
+  z-index:2;
+}
+.prompt-card{
+  min-width:0;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:1rem;
+  padding:.9rem 1rem;
+  background:rgba(8,29,66,.82);
+  box-shadow:0 14px 32px rgba(0,0,0,.22);
+  backdrop-filter:blur(12px);
+}
+.prompt-card span{
+  display:block;
+  color:#aebfda;
+  font-size:.74rem;
+  margin-bottom:.28rem;
+  line-height:1.45;
+}
+.prompt-card strong{
+  display:block;
+  color:#fff;
+  font-size:.92rem;
+  line-height:1.35;
+}
+/* 舊版提示框不再使用，避免絕對定位跑出畫面 */
+.float-card{display:none!important}
+@media(max-width:700px){
+  .prompt-card-row{grid-template-columns:1fr}
+  .prompt-card{padding:.8rem .9rem}
+}
+
+
+/* ===== 客戶列表欄位對齊修正 ===== */
+#customers-title + p,
+#results-count{white-space:nowrap}
+
+#customer-table-body td{
+  vertical-align:middle;
+}
+
+#customer-table-body tr{
+  height:86px;
+}
+
+/* 固定重要欄位的閱讀寬度，避免文字把整列擠亂 */
+#customer-table-body td:nth-child(1),
+#customer-table-body td:nth-child(4),
+#customer-table-body td:nth-child(5),
+#customer-table-body td:nth-child(6),
+#customer-table-body td:nth-child(8){
+  white-space:nowrap;
+}
+
+#customer-table-body td:nth-child(1){min-width:105px}
+#customer-table-body td:nth-child(2){min-width:165px;max-width:190px}
+#customer-table-body td:nth-child(3){min-width:150px;max-width:175px}
+#customer-table-body td:nth-child(4){min-width:125px}
+#customer-table-body td:nth-child(5){min-width:100px}
+#customer-table-body td:nth-child(6){min-width:125px;text-align:center}
+#customer-table-body td:nth-child(7){min-width:390px;max-width:430px}
+#customer-table-body td:nth-child(8){
+  min-width:95px;
+  text-align:center;
+}
+#customer-table-body td:nth-child(9){
+  min-width:285px;
+}
+
+/* Email / LINE / SMS 垂直、水平置中 */
+#customer-table-body .channel{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* 三個操作按鈕永遠排在同一列 */
+#customer-table-body .action-group{
+  display:grid;
+  grid-template-columns:repeat(3,max-content);
+  align-items:center;
+  justify-content:start;
+  gap:.45rem;
+  min-width:270px;
+  flex-wrap:nowrap;
+}
+
+#customer-table-body .action-group .button{
+  min-width:64px;
+  height:40px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  padding:.45rem .72rem;
+}
+
+#customer-table-body .action-group .button.primary{
+  min-width:86px;
+}
+
+/* 表頭也對齊 */
+.panel table thead th{
+  vertical-align:middle;
+}
+.panel table thead th:nth-child(6),
+.panel table thead th:nth-child(8){
+  text-align:center;
+}
+
+/* 客戶列表需要足夠寬度；小螢幕用水平捲動，不把按鈕擠成兩排 */
+.panel .table-wrap table{
+  min-width:1580px;
+}
+
+@media(max-width:900px){
+  #customer-table-body td:nth-child(7){min-width:340px}
+  .panel .table-wrap table{min-width:1500px}
+}
+
+
+/* ===== GitHub 發布版：客戶列表更緊湊 + 手機 / 電腦 RWD ===== */
+
+/* 桌面版：縮短每列高度、拉近欄位 */
+#customer-table-body tr{
+  height:auto !important;
+}
+#customer-table-body td{
+  padding:.68rem .55rem !important;
+  vertical-align:middle !important;
+  line-height:1.45 !important;
+}
+.panel table thead th{
+  padding:.7rem .55rem !important;
+}
+
+/* 不再把整張表強制撐到 1500px 以上 */
+.panel .table-wrap table{
+  min-width:1180px !important;
+}
+#customer-table-body td:nth-child(1){min-width:88px !important}
+#customer-table-body td:nth-child(2){min-width:128px !important;max-width:155px !important}
+#customer-table-body td:nth-child(3){min-width:122px !important;max-width:150px !important}
+#customer-table-body td:nth-child(4){min-width:108px !important}
+#customer-table-body td:nth-child(5){min-width:80px !important}
+#customer-table-body td:nth-child(6){min-width:96px !important}
+#customer-table-body td:nth-child(7){min-width:300px !important;max-width:360px !important}
+#customer-table-body td:nth-child(8){min-width:76px !important}
+#customer-table-body td:nth-child(9){min-width:238px !important}
+
+/* 操作按鈕更緊湊，但保持同一列 */
+#customer-table-body .action-group{
+  display:grid !important;
+  grid-template-columns:repeat(3,max-content) !important;
+  gap:.32rem !important;
+  min-width:230px !important;
+}
+#customer-table-body .action-group .button{
+  min-width:58px !important;
+  height:36px !important;
+  padding:.35rem .55rem !important;
+  font-size:.76rem !important;
+}
+#customer-table-body .action-group .button.primary{
+  min-width:76px !important;
+}
+
+/* 建議管道靠近操作欄 */
+#customer-table-body .channel{
+  min-width:76px !important;
+  text-align:center !important;
+  padding-left:.35rem !important;
+  padding-right:.35rem !important;
+}
+
+/* 大螢幕可完整看到更多欄位 */
+@media(min-width:1200px){
+  .app-shell{
+    width:min(100% - 2rem,1500px) !important;
+  }
+}
+
+/* 平板：仍保留表格，允許水平捲動 */
+@media(max-width:980px){
+  .panel .table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .panel .table-wrap table{
+    min-width:1080px !important;
+  }
+}
+
+/* 手機：客戶列表改成卡片式，不需要左右拉 */
+@media(max-width:700px){
+  .panel .table-wrap{
+    overflow:visible !important;
+  }
+
+  /* 只針對客戶列表，不影響 Excel 預覽表 */
+  #customer-table-body{
+    display:block;
+  }
+  #customer-table-body tr{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.45rem .8rem;
+    margin:0 0 .9rem;
+    padding:.9rem;
+    border:1px solid #e4e7ec;
+    border-radius:.85rem;
+    background:#fff;
+    box-shadow:0 4px 12px rgb(16 24 40 / 4%);
+  }
+  #customer-table-body td{
+    display:block;
+    min-width:0 !important;
+    max-width:none !important;
+    padding:.18rem 0 !important;
+    border:0 !important;
+    white-space:normal !important;
+    text-align:left !important;
+  }
+
+  /* 隱藏客戶列表表頭 */
+  #customers-title ~ .filters + .table-wrap table > thead{
+    display:none;
+  }
+  #customers-title ~ .filters + .table-wrap table{
+    min-width:0 !important;
+    width:100% !important;
+  }
+
+  /* Customer ID、客戶名、AI建議、操作橫跨整張卡片 */
+  #customer-table-body td:nth-child(1),
+  #customer-table-body td:nth-child(2),
+  #customer-table-body td:nth-child(7),
+  #customer-table-body td:nth-child(9){
+    grid-column:1 / -1;
+  }
+
+  #customer-table-body td:nth-child(1){
+    font-size:.78rem;
+    color:#667085;
+  }
+  #customer-table-body td:nth-child(2){
+    font-size:1rem;
+    font-weight:800;
+  }
+  #customer-table-body td:nth-child(7){
+    margin-top:.25rem;
+    padding-top:.55rem !important;
+    border-top:1px solid #eaecf0 !important;
+  }
+
+  #customer-table-body .action-group{
+    grid-template-columns:repeat(3,1fr) !important;
+    min-width:0 !important;
+    width:100%;
+    gap:.4rem !important;
+    margin-top:.35rem;
+  }
+  #customer-table-body .action-group .button{
+    width:100%;
+    min-width:0 !important;
+    height:38px !important;
+  }
+
+  #customer-table-body .channel{
+    text-align:left !important;
+  }
+
+  /* 手機版整體留白更緊湊 */
+  .panel{
+    margin-top:1.2rem !important;
+  }
+  .app-shell{
+    width:min(100% - 1rem,1280px) !important;
+  }
+}
+
+</style>
+</head>
+<body>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">AI CUSTOMER ENGAGEMENT</p>
+        <h1 id="hero-title">AI 智慧客戶維繫服務</h1>
+        <p class="hero-slogan">在對的時間，用對的方式，與客戶保持連結。</p>
+        <p class="hero-description">
+          從 Excel／CSV 客戶資料出發，協助企業整理購買紀錄、判斷客戶階段，
+          並提供下一步互動、聯絡管道與產品階段建議。
+        </p>
+        <div class="hero-actions">
+          <button class="hero-button primary" id="enter-dashboard" type="button">進入 Dashboard</button>
+          <button class="hero-button secondary" id="view-flow" type="button">查看運作流程</button>
+        </div>
+        <div class="hero-tags">
+          <span>教育</span><span>化妝品</span><span>電商</span><span>SaaS</span><span>製造業</span><span>B2B</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card visual-card-main">
+          <div class="visual-card-head">
+            <span class="visual-dot"></span>
+            <strong>智慧維繫決策</strong>
+            <span class="visual-chip">本地端</span>
+          </div>
+          <div class="decision-row"><span class="decision-icon">01</span><div><small>資料來源</small><strong>Excel / CSV 客戶資料</strong></div></div>
+          <div class="decision-line"></div>
+          <div class="decision-row"><span class="decision-icon">02</span><div><small>智慧判斷</small><strong>產品階段 × 購買時間</strong></div></div>
+          <div class="decision-line"></div>
+          <div class="decision-row"><span class="decision-icon">03</span><div><small>下一步</small><strong>Email · LINE · SMS</strong></div></div>
+        </div>
+        <div class="prompt-card-row" aria-label="系統特色">
+          <div class="prompt-card">
+            <span>可評估下一階段</span>
+            <strong>AI 建議</strong>
+          </div>
+          <div class="prompt-card">
+            <span>客戶資料不外傳</span>
+            <strong>隱私優先</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-flow" id="project-flow">
+      <div><strong>01</strong><span>匯入資料</span></div><i>→</i>
+      <div><strong>02</strong><span>資料標準化</span></div><i>→</i>
+      <div><strong>03</strong><span>智慧判斷</span></div><i>→</i>
+      <div><strong>04</strong><span>聯絡建議</span></div><i>→</i>
+      <div><strong>05</strong><span>下一步行動</span></div>
+    </div>
+  </section>
+
+  <main class="app-shell" id="dashboard">
+    <header class="topbar">
+      <div><p class="eyebrow">客戶維繫管理平台</p><h1>AI 智慧客戶維繫服務</h1></div>
+      <div class="topbar-actions">
+        <button class="back-home" id="back-home" type="button">回到封面</button>
+        <div class="today" id="today-label">資料更新</div>
+      </div>
+    </header>
+
+    <section aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">Dashboard</p><h2 id="overview-title">今日客戶概況</h2></div><p>依購買階段與資料狀態安排合適的下一步行動。</p></div>
+      <div class="stats-grid" id="stats-grid"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="advice-title">
+      <div class="section-heading compact"><div><p class="eyebrow">優先處理</p><h2 id="advice-title">今日 AI 建議</h2></div><p>第一版以本地端 JavaScript 規則引擎模擬 AI 決策。</p></div>
+      <div class="advice-grid" id="advice-grid"></div>
+    </section>
+
+    <section class="panel import-panel" aria-labelledby="import-title">
+      <div class="section-heading compact"><div><p class="eyebrow">本地端資料處理</p><h2 id="import-title">匯入客戶資料</h2></div><p>檔案只在此瀏覽器處理，不會上傳或儲存完整個資。單檔版載入 SheetJS 後即可匯入 Excel／CSV。</p></div>
+      <div class="privacy-note"><strong>隱私設計</strong><span>支援假名化資料；不使用後端、不使用資料庫、不將客戶資料送至外部 API。</span></div>
+      <div class="import-controls"><label class="file-picker" for="import-file">選擇 .xlsx、.xls 或 .csv 檔案<input id="import-file" type="file" accept=".xlsx,.xls,.csv" /></label><p id="import-feedback" class="muted" aria-live="polite">尚未選擇檔案。</p></div>
+      <div id="mapping-area" hidden><h3>欄位對應</h3><p class="muted">系統已自動辨識欄位；未辨識欄位可在這裡手動指定。</p><div id="mapping-fields" class="mapping-grid"></div></div>
+      <div id="preview-area" hidden>
+        <div class="preview-heading"><div><h3>匯入預覽</h3><p id="preview-count" class="muted"></p></div><button id="confirm-import" class="button primary" type="button">確認匯入 Dashboard</button></div>
+        <div class="table-wrap"><table class="preview-table"><thead><tr><th>Customer_ID</th><th>客戶名稱</th><th>手機</th><th>Email</th><th>購買產品</th><th>標準化產品類別</th><th>產品階段</th><th>下一階段</th><th>購買日期</th><th>資料狀態</th><th>操作</th></tr></thead><tbody id="preview-body"></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="customers-title">
+      <div class="section-heading compact"><div><p class="eyebrow">客戶資料</p><h2 id="customers-title">客戶列表</h2></div><p id="results-count" aria-live="polite"></p></div>
+      <div class="filters" aria-label="客戶篩選"><label class="search-field" for="customer-search"><span class="sr-only">搜尋客戶</span><input id="customer-search" type="search" placeholder="搜尋客戶或產品" autocomplete="off" /></label><label class="select-field" for="status-filter"><span>客戶狀態</span><select id="status-filter"><option value="all">全部狀態</option><option value="新客戶">新客戶</option><option value="活躍">活躍</option><option value="待關注">待關注</option><option value="長期未互動">長期未互動</option><option value="可能流失">可能流失</option><option value="可升級">可升級</option></select></label></div>
+      <div class="table-wrap"><table><thead><tr><th>Customer_ID</th><th>客戶</th><th>目前產品</th><th>購買日期</th><th>最後互動</th><th>客戶狀態</th><th>AI 建議</th><th>建議管道</th><th>操作</th></tr></thead><tbody id="customer-table-body"></tbody></table></div>
+      <p class="empty-state" id="empty-state" hidden>找不到符合條件的客戶。</p>
+    </section>
+
+    <footer class="demo-footer"><strong>AI 智慧客戶維繫服務｜MVP 展示版</strong><span>HTML · CSS · JavaScript · RWD · SheetJS · Local Processing</span></footer>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden><div class="modal-backdrop" data-close-modal></div><section class="modal-content"><button class="modal-close" type="button" aria-label="關閉視窗" data-close-modal>×</button><p class="eyebrow" id="modal-label"></p><h2 id="modal-title"></h2><div id="modal-body"></div></section></div>
+
+  <!-- Excel .xlsx/.xls 解析：SheetJS 官方 CDN。
+       因瀏覽器本身無法原生解析 Excel，開啟此單檔版時需能連線載入此函式庫。
+       客戶檔案仍只在瀏覽器本機記憶體解析，不會由本程式上傳。 -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script>
+"use strict";
+// 全部資料為展示用途的完全虛構資料，僅在使用者瀏覽器中處理。
+let customers=[
+ {id:1,name:"晴空企業／林小姐",product:"雲端協作入門",purchase:"2026/08/18",last:"2 天前",status:"新客戶",channel:"Email",action:"教學",advice:"寄送快速上手教學，協助完成首次設定。",score:"互動意願高，Email 開啟表現最佳。"},
+ {id:2,name:"星河工作室／周先生",product:"品牌顧問標準方案",purchase:"2026/06/02",last:"5 天前",status:"活躍",channel:"LINE",action:"關心",advice:"主動關心近期執行進度，提供可預約的諮詢時段。",score:"LINE 回覆快速，近期持續查看教學內容。"},
+ {id:3,name:"森沐生活／王小姐",product:"會員經營初級",purchase:"2026/06/01",last:"45 天前",status:"待關注",channel:"LINE",action:"關心",advice:"先進行使用關懷，暫時不要直接推薦下一階產品。",score:"LINE 曾有互動，但近 45 天未回覆。"},
+ {id:4,name:"遠景製作／陳先生",product:"客服流程優化方案",purchase:"2026/04/10",last:"82 天前",status:"長期未互動",channel:"Email",action:"提醒",advice:"以案例摘要提醒可用功能，邀請回覆目前需求。",score:"Email 曾開啟，但所有管道近期互動偏低。"},
+ {id:5,name:"日光選品／黃小姐",product:"電商成長中級",purchase:"2026/05/12",last:"97 天前",status:"可能流失",channel:"SMS",action:"提醒",advice:"以簡短提醒確認是否仍需服務，若未回覆請暫停聯絡。",score:"三管道近期皆無互動，僅 SMS 曾成功送達。"},
+ {id:6,name:"藍圖顧問／吳先生",product:"會員經營初級",purchase:"2026/06/08",last:"8 天前",status:"可升級",channel:"Email",action:"下一階產品推薦",advice:"適合介紹會員經營中級，並提供功能比較與試用邀請。",score:"已超過建議 45 天間隔，Email 開啟率高。"},
+ {id:7,name:"微光學苑／張小姐",product:"線上課程基礎方案",purchase:"2026/07/20",last:"1 天前",status:"活躍",channel:"LINE",action:"活動通知",advice:"通知本週直播教學活動，延續目前學習互動。",score:"LINE 互動率高，最近主動查閱課程。"},
+ {id:8,name:"禾本設計／許先生",product:"雲端協作入門",purchase:"2026/08/10",last:"12 天前",status:"待關注",channel:"Email",action:"教學",advice:"提供常見問題教學，確認團隊是否完成導入。",score:"尚未完成設定，Email 有兩次開啟紀錄。"}];
+const $=id=>document.getElementById(id);
+const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+let lastFocused;
+function badge(status){return `<span class="badge status-${status}">${status}</span>`}
+function renderStats(){const results=customers.map(c=>maintenanceResult(c));$("stats-grid").innerHTML=[["客戶總數",customers.length],["今日待處理",results.filter(r=>r.priority).length],["待關注客戶",results.filter(r=>r.status==="待人工確認"||r.status==="互動培養").length],["適合推薦下一階產品",results.filter(r=>r.recommend==="是").length]].map(([label,value])=>`<article class="stat-card"><p>${label}</p><strong>${value}</strong></article>`).join("")}
+function renderAdvice(){$("advice-grid").innerHTML=customers.map(c=>({c,r:maintenanceResult(c)})).sort((a,b)=>b.r.priority-a.r.priority).slice(0,3).map(({c,r})=>`<article class="advice-card"><h3>${escapeHtml(c.name)}</h3>${badge(r.status)}<p>${escapeHtml(r.nextAction)}</p><p class="muted">建議管道：<strong>${r.channel}</strong> ・ ${escapeHtml(r.reason)}</p></article>`).join("")}
+function visible(){const q=$("customer-search").value.trim().toLowerCase(),s=$("status-filter").value;return customers.filter(c=>(s==="all"||c.status===s)&&`${c.name} ${c.product}`.toLowerCase().includes(q))}
+function customerId(c){return c.customerId||`DEMO-${String(c.id).padStart(3,"0")}`}
+function displayValue(value){return value?escapeHtml(value):"未提供"}
+function renderCustomers(){const rows=visible();$("results-count").textContent=`顯示 ${rows.length} / ${customers.length} 位客戶`;$("customer-table-body").innerHTML=rows.map(c=>`<tr><td><button class="data-link" data-action="details" data-id="${c.id}">${escapeHtml(customerId(c))}</button></td><td><button class="data-link" data-action="details" data-id="${c.id}">${escapeHtml(c.name)}</button></td><td>${escapeHtml(c.product)}</td><td>${c.purchase}</td><td>${c.last}</td><td>${badge(c.status)}</td><td>${escapeHtml(c.advice)}</td><td class="channel">${c.channel}</td><td><div class="action-group"><button class="button" data-action="details" data-id="${c.id}">查看</button><button class="button" data-action="analysis" data-id="${c.id}">AI 分析</button><button class="button primary" data-action="message" data-id="${c.id}">產生訊息</button></div></td></tr>`).join("");$("empty-state").hidden=rows.length>0}
+function details(c){
+  const r=maintenanceResult(c);
+  const emailLabel=r.channel==="Email"?"Email（建議管道）":"Email";
+  return `<dl class="detail-list">
+    <dt>客戶編號</dt><dd>${escapeHtml(customerId(c))}</dd>
+    <dt>客戶名稱</dt><dd>${escapeHtml(c.name)}</dd>
+    <dt>手機</dt><dd>${displayValue(c.cellphone)}</dd>
+    <dt>Email</dt><dd>${displayValue(c.email)}</dd>
+    <dt>購買產品</dt><dd>${escapeHtml(c.product)}</dd>
+    <dt>購買日期</dt><dd>${c.purchase}</dd>
+    <dt>距今</dt><dd>${r.days===null?"無法計算":`${r.days} 天`}</dd>
+    <dt>備註</dt><dd>${displayValue(c.note)}</dd>
+    <dt>產品類別</dt><dd>${displayValue(c.category)}</dd>
+    <dt>產品階段</dt><dd>${displayValue(c.stage)}</dd>
+    <dt>下一階段</dt><dd>${displayValue(c.next)}</dd>
+    <dt>資料狀態</dt><dd>${displayValue(c.dataStatus)}</dd>
+  </dl>
+  <div class="analysis">
+    <strong>智慧維繫建議</strong><br>
+    目前階段：${r.stage}<br>
+    已購買：${r.days===null?"無法計算":`${r.days} 天`}<br>
+    建議狀態：${r.status}<br>
+    下一步：${r.nextAction}<br>
+    建議訊息方向：${r.messageDirection}<br>
+    是否適合推薦：${r.recommend}<br>
+    判斷原因：${r.reason}
+  </div>
+  <div class="contact-options" aria-label="聯絡方式">
+    <button class="button primary" type="button" data-contact-channel="Email" data-customer-id="${c.id}">${emailLabel}</button>
+    <span>LINE（尚未串接）</span>
+    <span>SMS（僅顯示）</span>
+  </div>`}
+function templates(c){const greeting=`${c.name} 您好`;return {Email:`主旨：關於「${c.product}」的貼心提醒\n\n${greeting}：\n\n我們注意到您上次互動是在${c.last}。${c.advice}\n\n如有需要，歡迎直接回覆這封信，我們會協助您安排下一步。\n\nAI 智慧客戶維繫服務 敬上`,LINE:`${greeting} 😊\n\n想關心您近期使用「${c.product}」的情況。${c.advice}\n\n需要協助的話，直接回覆我們就可以了！`,SMS:`${c.name}您好：關於「${c.product}」，${c.advice} 如需協助請回覆訊息。`}}
+
+function analysisEmailDraft(c){
+  const r=maintenanceResult(c);
+  const daysText=r.days===null?"目前尚無法確認購買天數":`您目前已使用／購買約 ${r.days} 天`;
+  const currentStage=c.stage&&c.stage!=="待確認"?c.stage:"目前階段";
+  const nextStage=c.next&&c.next!=="暫無"&&c.next!=="待設定"&&c.next!=="待確認"?c.next:"下一階段服務";
+
+  if(r.recommend==="是"){
+    return `主旨：關於「${c.product}」下一階段的學習／使用建議
+
+${c.name} 您好：
+
+感謝您持續使用「${c.product}」。依目前資料，您現在位於「${currentStage}」階段，${daysText}。
+
+依照目前的產品階段與時間判斷，我們認為您可以開始了解「${nextStage}」的內容與差異。這不是強迫升級，而是提供下一階段資訊，讓您依自己的使用成果與需求評估是否適合繼續往下。
+
+如果您願意，我們可以提供：
+・目前階段與下一階段的內容差異
+・適合什麼情況進入下一階段
+・相關使用／學習建議
+
+如果您想先了解「${nextStage}」，直接回覆這封信即可，我們會協助您。
+
+AI 智慧客戶維繫服務 敬上`;
+  }
+
+  if(r.recommend==="待確認"){
+    return `主旨：想先確認您目前的使用狀況
+
+${c.name} 您好：
+
+感謝您使用「${c.product}」。
+
+目前系統判斷仍有部分資料需要確認，因此這次不直接推薦下一階段產品。我們想先了解您目前主要使用的產品、實際需求與使用狀況，再提供比較合適的建議。
+
+如果方便，歡迎直接回覆目前最需要協助的地方。
+
+AI 智慧客戶維繫服務 敬上`;
+  }
+
+  return `主旨：關於「${c.product}」的使用近況
+
+${c.name} 您好：
+
+感謝您使用「${c.product}」。${daysText}。
+
+依目前狀態，我們建議先以使用協助、內容分享與互動為主，暫時不急著推薦下一階段產品。
+
+如果近期有任何使用上的問題或想了解的內容，歡迎直接回覆，我們會協助您。
+
+AI 智慧客戶維繫服務 敬上`;
+}
+
+function openModal(label,title,html){lastFocused=document.activeElement;$("modal-label").textContent=label;$("modal-title").textContent=title;$("modal-body").innerHTML=html;$("modal").hidden=false;document.body.style.overflow="hidden";document.querySelector(".modal-close").focus()}
+function closeModal(){$("modal").hidden=true;document.body.style.overflow="";lastFocused?.focus()}
+function clickTable(e){const b=e.target.closest("button[data-action]");if(!b)return;const c=customers.find(x=>x.id===Number(b.dataset.id));if(b.dataset.action==="details")openModal("客戶詳細資料",c.name,details(c));if(b.dataset.action==="analysis")openModal("AI 模擬分析",c.name,`${details(c)}<div class="analysis"><strong>AI 模擬分析結果</strong><br>${c.score}<br><br><strong>下一步建議：</strong>${c.advice}</div>`);if(b.dataset.action==="message"){const msg=templates(c);openModal("AI 模擬訊息",c.name,`<p class="muted">以下為本地端 JavaScript 模擬產生的訊息內容。</p><div class="message-tabs">${Object.keys(msg).map((ch,i)=>`<button class="message-tab${i?"":" active"}" data-channel="${ch}">${ch}</button>`).join("")}</div><div class="message-content">${escapeHtml(msg.Email)}</div>`)}}
+function clickModal(e){
+  if(e.target.matches("[data-close-modal]"))return closeModal();
+
+  const contactButton=e.target.closest("[data-contact-channel]");
+  if(contactButton){
+    const c=customers.find(x=>x.id===Number(contactButton.dataset.customerId));
+    if(c&&contactButton.dataset.contactChannel==="Email"){
+      const draft=analysisEmailDraft(c);
+      openModal("AI 個人化 Email 草稿",c.name,
+        `<p class="muted">此草稿依目前客戶階段、購買天數與下一階產品規則由本地 JavaScript 產生。</p>
+         <div class="message-content">${escapeHtml(draft)}</div>`);
+    }
+    return;
+  }
+
+  const tab=e.target.closest("[data-channel]");
+  if(!tab)return;
+  const c=customers.find(x=>x.name===$("modal-title").textContent);
+  document.querySelector(".message-content").textContent=templates(c)[tab.dataset.channel];
+  document.querySelectorAll(".message-tab").forEach(x=>x.classList.toggle("active",x===tab));
+}
+$("customer-search").addEventListener("input",renderCustomers);$("status-filter").addEventListener("change",renderCustomers);$("customer-table-body").addEventListener("click",clickTable);$("modal").addEventListener("click",clickModal);document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("modal").hidden)closeModal()});
+
+const importFields=["Customer_ID","name","cellphone","email","purchasing","date","note"];
+const fieldLabels={Customer_ID:"客戶編號",name:"客戶名稱",cellphone:"手機",email:"Email",purchasing:"購買產品",date:"購買日期",note:"備註"};
+const headerAliases={customer_id:"Customer_ID",customerid:"Customer_ID",id:"Customer_ID",name:"name",姓名:"name",客戶名稱:"name",cellphone:"cellphone",phone:"cellphone",mobile:"cellphone",手機:"cellphone",email:"email",e_mail:"email",信箱:"email",purchasing:"purchasing",product:"purchasing",購買產品:"purchasing",date:"date",purchase_date:"date",購買日期:"date",note:"note",備註:"note"};
+const productRules={"初級函授":{category:"函授課程",stage:"初級",next:"中級函授"},"中級函授":{category:"函授課程",stage:"中級",next:"中高級函授"},"中高級函授":{category:"函授課程",stage:"中高級",next:"高級函授"},"高級函授":{category:"函授課程",stage:"高級",next:"暫無"},"文法全集":{category:"教材",stage:"單項產品",next:"待設定"},"英文單書":{category:"教材",stage:"單項產品",next:"待設定"}};
+let importedRows=[];let importHeaders=[];let importMapping={};
+function cleanHeader(value){return String(value??"").trim().toLowerCase().replace(/[\s-]/g,"_")}
+function autoMap(headers){const map={};importFields.forEach(field=>{map[field]=headers.find(header=>headerAliases[cleanHeader(header)]===field)||""});return map}
+function normalizeDate(value){if(value===null||value===undefined||value==="")return "日期待確認";if(typeof value==="number"&&Number.isFinite(value)){const date=new Date(Date.UTC(1899,11,30)+value*86400000);return date.toISOString().slice(0,10)}const match=String(value).trim().match(/^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/);if(!match)return "日期待確認";const date=new Date(Date.UTC(Number(match[1]),Number(match[2])-1,Number(match[3])));return date.getUTCFullYear()===Number(match[1])&&date.getUTCMonth()===Number(match[2])-1&&date.getUTCDate()===Number(match[3])?date.toISOString().slice(0,10):"日期待確認"}
+function normalizeProduct(value){const raw=String(value??"").trim();const matches=Object.keys(productRules).filter(product=>raw.includes(product));if(matches.length>1)return {raw,category:"多產品客戶",stage:"待確認",next:"待確認",status:"多產品客戶"};if(matches.length===1)return {...productRules[matches[0]],raw,status:"正常"};return {raw,category:"待分類",stage:"待確認",next:"待設定",status:"產品待分類"}}
+const courseIntervals={"初級":45,"中級":60,"中高級":60};
+function purchasedDays(value,today=new Date()){if(!/^\d{4}-\d{2}-\d{2}$/.test(String(value)))return null;const date=new Date(`${value}T00:00:00`);if(Number.isNaN(date.getTime()))return null;return Math.max(0,Math.floor((new Date(today.getFullYear(),today.getMonth(),today.getDate())-date)/86400000))}
+function maintenanceResult(customer,today=new Date()){const days=purchasedDays(customer.purchase,today),stage=customer.stage||"待確認",channel=customer.email?"Email":customer.cellphone?"SMS":"LINE";const base={days,stage,channel,priority:1};if(days===null)return {...base,status:"待人工確認",nextAction:"先確認購買日期",messageDirection:"請客戶或服務人員補充正確購買日期",recommend:"待確認",reason:"購買日期無法解析，無法計算適合的維繫時機。",priority:5};if(customer.dataStatus==="多產品客戶"||customer.category==="多產品客戶")return {...base,status:"待人工確認",nextAction:"先確認多產品使用情況",messageDirection:"詢問主要使用產品與目前需求",recommend:"待確認",reason:"此客戶有多項產品紀錄，暫不自動推薦下一階產品。",priority:4};if(customer.dataStatus==="產品待分類"||customer.category==="待分類")return {...base,status:"待人工確認",nextAction:"先確認產品分類",messageDirection:"確認購買產品與使用目的",recommend:"待確認",reason:"目前無法辨識產品類型，需先人工確認。",priority:3};if(customer.category==="教材"||customer.next==="待設定")return {...base,status:"持續維繫",nextAction:"提供內容互動與使用維繫",messageDirection:"分享使用技巧、相關內容或學習提醒",recommend:"否",reason:"目前沒有設定明確的下一階產品，建議先以內容互動與使用維繫為主。",priority:1};if(stage==="高級"||customer.next==="暫無")return {...base,status:"持續維繫",nextAction:"提供內容與服務關懷",messageDirection:"提供進階內容、服務資訊與使用關心",recommend:"否",reason:"高級函授目前沒有固定的下一階產品。",priority:1};const interval=courseIntervals[stage];if(!interval)return {...base,status:"待人工確認",nextAction:"確認產品階段",messageDirection:"確認目前使用情況",recommend:"待確認",reason:"目前產品階段尚未設定規則。",priority:2};if(days<30)return {...base,status:"使用陪伴",nextAction:"提供使用方式、學習提醒或相關內容",messageDirection:"以協助上手與陪伴學習為主",recommend:"否",reason:`購買未滿 30 天，尚不適合推薦 ${customer.next}。`,priority:1};if(days<interval)return {...base,status:"互動培養",nextAction:"詢問使用狀況並提供學習技巧",messageDirection:"以使用關懷與技巧內容建立互動",recommend:"否",reason:`已購買 ${days} 天，尚未到 ${interval} 天的下一階段評估時間。`,priority:2};return {...base,status:"可評估下一階段",nextAction:`以非強迫方式介紹${customer.next}`,messageDirection:"以使用成果與下一階段差異為主，邀請了解即可",recommend:"是",reason:`已購買 ${days} 天，已超過 ${stage}函授建議 ${interval} 天的評估間隔。`,priority:6}}
+function makePreview(){return importedRows.map((row,index)=>{const product=normalizeProduct(row[importMapping.purchasing]);const date=normalizeDate(row[importMapping.date]);const dataStatus=product.status!=="正常"?product.status:date==="日期待確認"?"日期待確認":"正常";return {id:String(row[importMapping.Customer_ID]??`IMP-${index+1}`).trim()||`IMP-${index+1}`,name:String(row[importMapping.name]??"未提供名稱").trim()||"未提供名稱",cellphone:String(row[importMapping.cellphone]??"").trim(),email:String(row[importMapping.email]??"").trim(),note:String(row[importMapping.note]??"").trim(),product,date,...product,dataStatus}})}
+function renderMapping(){const options=header=>`<option value="${escapeHtml(header)}">${escapeHtml(header)}</option>`;$("mapping-fields").innerHTML=importFields.map(field=>`<label>${fieldLabels[field]}<select data-map-field="${field}"><option value="">未對應</option>${importHeaders.map(options).join("")}</select></label>`).join("");document.querySelectorAll("[data-map-field]").forEach(select=>{select.value=importMapping[select.dataset.mapField]||"";select.addEventListener("change",event=>{importMapping[event.target.dataset.mapField]=event.target.value;renderPreview()})})}
+function renderPreview(){const preview=makePreview();$("preview-body").innerHTML=preview.map((row,index)=>`<tr><td><button class="data-link" data-preview-index="${index}">${escapeHtml(row.id)}</button></td><td><button class="data-link" data-preview-index="${index}">${escapeHtml(row.name)}</button></td><td>${displayValue(row.cellphone)}</td><td>${displayValue(row.email)}</td><td>${escapeHtml(row.raw||"未提供")}</td><td>${escapeHtml(row.category)}</td><td>${escapeHtml(row.stage)}</td><td>${escapeHtml(row.next)}</td><td>${row.date}</td><td><span class="badge data-status ${row.dataStatus}">${row.dataStatus}</span></td><td><button class="button" data-preview-index="${index}">查看</button></td></tr>`).join("");$("preview-count").textContent=`共 ${preview.length} 筆資料；確認前不會改動 Dashboard。`;$("preview-area").hidden=false}
+function parseWorkbook(buffer){if(!window.XLSX)throw new Error("檔案解析工具尚未載入");const workbook=XLSX.read(buffer,{type:"array",cellDates:false});const sheet=workbook.Sheets[workbook.SheetNames[0]];return XLSX.utils.sheet_to_json(sheet,{defval:"",raw:true})}
+async function readImportFile(event){const file=event.target.files[0];if(!file)return;const extension=file.name.split(".").pop().toLowerCase();if(!["xlsx","xls","csv"].includes(extension)){ $("import-feedback").textContent="請選擇 .xlsx、.xls 或 .csv 檔案。";return }try{$("import-feedback").textContent="正在於本機讀取與建立預覽…";importedRows=parseWorkbook(await file.arrayBuffer());importHeaders=importedRows.length?Object.keys(importedRows[0]):[];if(!importHeaders.length)throw new Error("找不到可匯入的資料列");importMapping=autoMap(importHeaders);$("mapping-area").hidden=false;renderMapping();renderPreview();$("import-feedback").textContent=`已在本機讀取 ${importedRows.length} 筆資料：${file.name}` }catch(error){$("import-feedback").textContent=`無法讀取檔案：${error.message}`;$("mapping-area").hidden=true;$("preview-area").hidden=true}}
+function importToDashboard(){const preview=makePreview();if(!preview.length)return;customers=preview.map((row,index)=>({id:index+1,customerId:row.id,name:row.name,cellphone:row.cellphone,email:row.email,note:row.note,product:row.raw||"未分類產品",category:row.category,stage:row.stage,next:row.next,dataStatus:row.dataStatus,purchase:row.date,last:"尚無互動",status:row.dataStatus==="正常"?"新客戶":"待關注",channel:row.email?"Email":row.cellphone?"SMS":"Email",action:row.dataStatus==="正常"?"教學":"關心",advice:row.dataStatus==="正常"?"已匯入，建議先提供產品使用教學。":"資料需確認後，再安排適當聯絡。",score:`Customer_ID ${row.id} 的匯入資料狀態：${row.dataStatus}。` }));renderStats();renderAdvice();renderCustomers();$("import-feedback").textContent=`已確認匯入 ${customers.length} 筆資料至 Dashboard；原始檔案未被修改。`;$("preview-area").hidden=true;$("mapping-area").hidden=true;$("import-file").value=""}
+function clickPreview(event){const button=event.target.closest("[data-preview-index]");if(!button)return;const row=makePreview()[Number(button.dataset.previewIndex)];if(row)openModal("客戶詳細資料",row.name,details({customerId:row.id,name:row.name,cellphone:row.cellphone,email:row.email,note:row.note,product:row.raw||"未提供",category:row.category,stage:row.stage,next:row.next,dataStatus:row.dataStatus,purchase:row.date}))}
+$("import-file").addEventListener("change",readImportFile);$("confirm-import").addEventListener("click",importToDashboard);$("preview-body").addEventListener("click",clickPreview);
+renderStats();renderAdvice();renderCustomers();
+
+  </script>
+</body>
+</html>
